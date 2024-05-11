@@ -187,11 +187,11 @@ int bkwrk_get_worker() {
 
   if (i == -1) {
     // All workers busy! Find the earliest worker.
-    unsigned int earliest = wrkid_tid[0];
+    unsigned int bestearliest = wrkid_tid[0];
     unsigned int index = 0;
     for (i = 1; i < MAX_WORKER; i++) {
-      if (wrkid_tid[i] < earliest) {
-        earliest = wrkid_tid[i];
+      if (wrkid_tid[i] < bestearliest) {
+        bestearliest = wrkid_tid[i];
         index = i;
       }
     }
